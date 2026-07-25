@@ -1040,7 +1040,9 @@ OPTFUNC(SetWin64)
 		/* ensure that basereg is RSP */
 		if (ModuleInfo.basereg[ModuleInfo.Ofssize] != T_RSP)
 		{
-            EmitWarn(2, STACKBASE_CHANGED);
+                    #if STACKBASE_CHANGED_WARNING
+                        EmitWarn(2, STACKBASE_CHANGED);
+                    #endif    
 
 			ModuleInfo.basereg[ModuleInfo.Ofssize] = T_RSP;
 			if (!ModuleInfo.g.StackBase) 

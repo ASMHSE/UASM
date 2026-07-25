@@ -180,6 +180,11 @@
 #endif
 #define VARARGML 1    /* multi line vararg for macros */
 
+#ifndef STACKBASE_CHANGED_WARNING
+#define STACKBASE_CHANGED_WARNING  0
+#endif
+
+
 /* old Wasm extensions */
 #define PAGE4K       0 /* support 4kB-page OMF segment alignment */
 #define BUILD_TARGET 0 /* support "build target" (obsolete)   */
